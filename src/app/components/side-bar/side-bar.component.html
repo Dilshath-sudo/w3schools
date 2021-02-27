@@ -5,7 +5,12 @@
   </div>
 
   <ul class="list-unstyled components">
-    <p>Dummy Heading</p>
+    <ng-container *ngFor="let menuItem of MENU_LIST_DATA">
+      <li>
+        <a [routerLink]="menuItem.url">{{ menuItem.label }}</a>
+      </li>
+    </ng-container>
+    <!-- <p>Dummy Heading</p>
     <li class="active">
       <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
       <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -42,6 +47,6 @@
     </li>
     <li>
       <a href="#">Contact</a>
-    </li>
+    </li> -->
   </ul>
 </nav>
