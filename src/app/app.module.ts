@@ -10,8 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'lesson/learn-html', component: BodyComponent },
-  { path: 'lesson/learn-css', component: BodyComponent }
+  { path: 'lesson/:lessonName', component: BodyComponent }
 ];
 
 @NgModule({
