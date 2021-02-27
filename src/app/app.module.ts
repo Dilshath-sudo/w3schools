@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { BodyComponent } from './components/body/body.component';
+import { HomeComponent } from './components/home/home.component';
 
-export const ROUTES: Routes = [{
-  path: 'lesson/learn-html', component: BodyComponent
-}];
+export const ROUTES: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'lesson/learn-html', component: BodyComponent },
+  { path: 'lesson/learn-css', component: BodyComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     BodyComponent,
-    SideBarComponent
+    SideBarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
