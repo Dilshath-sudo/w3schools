@@ -1,0 +1,13 @@
+.background-color {
+  background-color: #4CAF50 !important;
+}
+
+.title, .link-text {
+  color: white !important;
+}
+
+.btn-outline-success {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
