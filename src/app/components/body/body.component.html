@@ -1,3 +1,4 @@
 <h2>{{ lessonTitle }}</h2>
+<!-- <p>Reference Button Click Count: {{ clickCount }}</p> -->
 <br>
-<app-summary-box [lesson]="lesson"></app-summary-box>
+<app-summary-box [lesson]="lessonDetails" (buttonClicked)="addCount()"></app-summary-box>

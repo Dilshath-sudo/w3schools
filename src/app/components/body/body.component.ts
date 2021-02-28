@@ -10,22 +10,27 @@ import { MenuItemVO } from 'src/app/vo/menu-item.vo';
 })
 export class BodyComponent implements OnInit {
 
-  lesson: MenuItemVO;
+  lessonDetails: MenuItemVO;
   lessonUrl: string;
   lessonTitle: string;
+  clickCount = 0;
 
   constructor(private activatedRoute: ActivatedRoute, private lessonService: LessonService) { }
 
   ngOnInit(): void {
     this.lessonUrl = this.activatedRoute.snapshot.params['lessonUrl'];
-    this.lesson = this.lessonService.getLessonFromUrl(this.lessonUrl);
-    this.lessonTitle = this.lesson.lessonTitle;
+    this.lessonDetails = this.lessonService.getLessonFromUrl(this.lessonUrl);
+    this.lessonTitle = this.lessonDetails.lessonTitle;
 
     this.activatedRoute.params.subscribe((params: Params) => {
       this.lessonUrl = params['lessonUrl'];
-      this.lesson = this.lessonService.getLessonFromUrl(this.lessonUrl);
-      this.lessonTitle = this.lesson.lessonTitle;
+      this.lessonDetails = this.lessonService.getLessonFromUrl(this.lessonUrl);
+      this.lessonTitle = this.lessonDetails.lessonTitle;
     });
+  }
+
+  addCount(): void {
+    this.clickCount = this.clickCount + 1;
   }
 
 }

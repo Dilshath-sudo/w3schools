@@ -4,8 +4,8 @@
   <div class="w3-col l6 w3-center" style="padding:3%">
    <h1>{{ lesson.lessonType }}</h1>
    <p class="w3-xlarge w3-text-dark-grey">{{ lesson.lessonDescription }}</p>
-   <a href="/html/default.asp" class="w3-button w3-dark-grey">LEARN {{ lesson.lessonType }}</a>
-   <a href="/tags/default.asp" class="w3-button w3-dark-grey">{{ lesson.lessonType }} REFERENCE</a>
+   <a class="w3-button w3-dark-grey">LEARN {{ lesson.lessonType }}</a>
+   <a (click)="onClickReference()" class="w3-button w3-dark-grey">{{ lesson.lessonType }} REFERENCE</a>
   </div>
   <div class="w3-col l6" style="padding:3%">
    <div class="w3-hide-small w3-light-grey w3-card-2" style="padding:16px;">

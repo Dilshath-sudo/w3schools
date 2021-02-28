@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MenuItemVO } from 'src/app/vo/menu-item.vo';
 
 @Component({
@@ -9,10 +9,16 @@ import { MenuItemVO } from 'src/app/vo/menu-item.vo';
 export class SummaryBoxComponent implements OnInit {
 
   @Input() lesson: MenuItemVO;
+  @Output() buttonClicked: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickReference(): void {
+    alert('Refence Button Clicked: ' + this.lesson.lessonType);
+    this.buttonClicked.emit();
   }
 
 }

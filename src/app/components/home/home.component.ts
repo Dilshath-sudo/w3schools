@@ -10,10 +10,15 @@ import { MenuItemVO } from 'src/app/vo/menu-item.vo';
 export class HomeComponent implements OnInit {
 
   readonly MENU_LIST_DATA: Array<MenuItemVO> = MENU_LIST_DATA;
+  clickCount = 0;
   
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addCount(): void {
+    this.clickCount = this.clickCount + 1;
   }
 
 }
