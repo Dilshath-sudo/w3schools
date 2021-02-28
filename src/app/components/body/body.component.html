@@ -1,4 +1,4 @@
-<h2>{{ lessonTitle }}</h2>
-<!-- <p>Reference Button Click Count: {{ clickCount }}</p> -->
+<h2 [appColor]="'red'">{{ lessonTitle }}</h2>
+<p>Reference Button Click Count: <span [appColor]="countColor">{{ clickCount }}</span></p>
 <br>
 <app-summary-box [lesson]="lessonDetails" (buttonClicked)="addCount()"></app-summary-box>

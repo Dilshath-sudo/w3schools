@@ -14,6 +14,7 @@ export class BodyComponent implements OnInit {
   lessonUrl: string;
   lessonTitle: string;
   clickCount = 0;
+  countColor = 'yellow';
 
   constructor(private activatedRoute: ActivatedRoute, private lessonService: LessonService) { }
 

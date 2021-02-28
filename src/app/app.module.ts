@@ -8,6 +8,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { BodyComponent } from './components/body/body.component';
 import { HomeComponent } from './components/home/home.component';
 import { SummaryBoxComponent } from './components/summary-box/summary-box.component';
+import { ColorDirective } from './color.directive';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +22,8 @@ export const ROUTES: Routes = [
     BodyComponent,
     SideBarComponent,
     HomeComponent,
-    SummaryBoxComponent
+    SummaryBoxComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,
