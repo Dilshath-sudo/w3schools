@@ -17,7 +17,7 @@ export class SummaryBoxComponent implements OnInit {
   }
 
   onClickReference(): void {
-    alert('Refence Button Clicked: ' + this.lesson.lessonType);
+    // alert('Refence Button Clicked: ' + this.lesson.lessonType);
     this.buttonClicked.emit();
   }
 

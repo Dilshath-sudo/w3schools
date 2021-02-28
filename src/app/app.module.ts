@@ -9,6 +9,7 @@ import { BodyComponent } from './components/body/body.component';
 import { HomeComponent } from './components/home/home.component';
 import { SummaryBoxComponent } from './components/summary-box/summary-box.component';
 import { ColorDirective } from './color.directive';
+import { SquarePipe } from './square.pipe';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +24,8 @@ export const ROUTES: Routes = [
     SideBarComponent,
     HomeComponent,
     SummaryBoxComponent,
-    ColorDirective
+    ColorDirective,
+    SquarePipe
   ],
   imports: [
     BrowserModule,

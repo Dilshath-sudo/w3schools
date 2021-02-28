@@ -1,4 +1,5 @@
-<h2 [appColor]="'red'">{{ lessonTitle }}</h2>
+<h2 [appColor]="'red'">{{ lessonTitle | uppercase }}</h2>
 <p>Reference Button Click Count: <span [appColor]="countColor">{{ clickCount }}</span></p>
+<p>Reference Button Click Count Square: <span>{{ clickCount | square }}</span></p>
 <br>
 <app-summary-box [lesson]="lessonDetails" (buttonClicked)="addCount()"></app-summary-box>
