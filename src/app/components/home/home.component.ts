@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MENU_LIST_DATA } from 'src/app/data/menu-list.data';
+import { MenuItemVO } from 'src/app/vo/menu-item.vo';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  readonly MENU_LIST_DATA: Array<MenuItemVO> = MENU_LIST_DATA;
+  
   constructor() { }
 
   ngOnInit(): void {

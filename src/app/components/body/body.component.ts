@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { LessonService } from 'src/app/services/lesson.service';
+import { MenuItemVO } from 'src/app/vo/menu-item.vo';
 
 @Component({
   selector: 'app-body',
@@ -9,6 +10,7 @@ import { LessonService } from 'src/app/services/lesson.service';
 })
 export class BodyComponent implements OnInit {
 
+  lesson: MenuItemVO;
   lessonUrl: string;
   lessonTitle: string;
 
@@ -16,11 +18,13 @@ export class BodyComponent implements OnInit {
 
   ngOnInit(): void {
     this.lessonUrl = this.activatedRoute.snapshot.params['lessonUrl'];
-    this.lessonTitle = this.lessonService.getLessonTitleFromUrl(this.lessonUrl);
+    this.lesson = this.lessonService.getLessonFromUrl(this.lessonUrl);
+    this.lessonTitle = this.lesson.lessonTitle;
 
     this.activatedRoute.params.subscribe((params: Params) => {
       this.lessonUrl = params['lessonUrl'];
-      this.lessonTitle = this.lessonService.getLessonTitleFromUrl(this.lessonUrl);
+      this.lesson = this.lessonService.getLessonFromUrl(this.lessonUrl);
+      this.lessonTitle = this.lesson.lessonTitle;
     });
   }
 

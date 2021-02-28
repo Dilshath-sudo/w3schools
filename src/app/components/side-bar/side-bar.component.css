@@ -1,5 +1,6 @@
 .sidebar {
   margin: 10px;
+  width: 150px;
 }
 
 .link-text {
@@ -8,4 +9,8 @@
 
 .link-text {
   text-decoration: none !important;
+}
+
+.selected-lesson {
+  background-color: lightgray;
 }

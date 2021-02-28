@@ -3,4 +3,6 @@ export interface MenuItemVO {
   url: string;
   label: string;
   lessonTitle: string;
+  lessonType: string;
+  lessonDescription: string;
 }

@@ -1,1 +1,5 @@
 <h1>Welcome to w3schools.com</h1>
+
+<ng-container *ngFor="let lesson of MENU_LIST_DATA">
+  <app-summary-box [lesson]="lesson"></app-summary-box>
+</ng-container>

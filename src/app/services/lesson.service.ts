@@ -11,13 +11,13 @@ export class LessonService {
 
   constructor() { }
 
-  getLessonTitleFromUrl(url: string): string {
-    let lessonTitle: string
+  getLessonFromUrl(url: string): MenuItemVO {
+    let lesson: MenuItemVO;
     this.MENU_LIST_DATA.forEach((menuItem: MenuItemVO) => {
       if (menuItem.url === 'lesson/' + url) {
-        lessonTitle = menuItem.lessonTitle;
+        lesson = menuItem;
       }
     });
-    return lessonTitle;
+    return lesson;
   }
 }

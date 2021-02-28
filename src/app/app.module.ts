@@ -7,6 +7,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { BodyComponent } from './components/body/body.component';
 import { HomeComponent } from './components/home/home.component';
+import { SummaryBoxComponent } from './components/summary-box/summary-box.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -19,7 +20,8 @@ export const ROUTES: Routes = [
     TopBarComponent,
     BodyComponent,
     SideBarComponent,
-    HomeComponent
+    HomeComponent,
+    SummaryBoxComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
 <nav id="sidebar" class="sidebar">
   <ul class="list-unstyled components">
     <ng-container *ngFor="let menuItem of MENU_LIST_DATA">
-      <li>
+      <li routerLinkActive="selected-lesson">
         <a class="link-text" [routerLink]="menuItem.url">{{ menuItem.label }}</a>
       </li>
     </ng-container>
